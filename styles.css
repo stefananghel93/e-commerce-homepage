@@ -7,6 +7,8 @@ body{
     font-family: "Lexend",sans-serif;
 }
 
+/* HEADER SECTION */
+
 .wrapper{
     max-width: 1191px;
     margin:0 auto;
@@ -25,7 +27,7 @@ header{
     }
 
     .logo {
-            width: 258.72px;
+            width: 258px;
             font-style: normal;
             font-size: 24px;
             background-color: black;
@@ -148,9 +150,19 @@ header{
     }
 
     
-    /* Responsivnes - Styles for screens less than 800px */
+    /* Responsivnes - Styles for screens less than 900px */
 
 @media screen and (max-width: 900px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        gap:350px;
+    }
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -193,12 +205,7 @@ header{
         padding-right: 20px; 
     }
 
-    .right {
-        flex: 1;
-        text-align: center; 
-    }
-
-
+    
     .btns {
         margin-top: 20px; 
     }
@@ -228,6 +235,8 @@ header{
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap:20px;
+    width: 100%;
+    margin-top: 200px;
     
     
 }
@@ -235,9 +244,6 @@ header{
 .title-holder{
     display: flex;
     flex-direction: column;
-    grid-auto-flow: column;
-
-
 }
 
 .title-holder h2{
@@ -304,14 +310,18 @@ header{
     font-size: 50px;
 }
 
+/* Responsivnes - Styles for screens less than 900px */
+
 @media (max-width: 900px){
     .category-section{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 400px;
-        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-top: 40%;
         width:100%;
+        
     }
 
 
