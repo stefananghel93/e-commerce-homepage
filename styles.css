@@ -16,8 +16,8 @@ body{
 
 header{
     background: var(--bg, linear-gradient(180deg, #C1C1C1 24.48%, rgba(243, 243, 243, 0.00) 83.33%));
-    height: 100vh;
     width: 100%;
+    
 }
     .navbar {
         display: flex;
@@ -81,21 +81,22 @@ header{
 
     .hero-section {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 40px 0;
-        height: 100vh;
         width: 100%;
+        padding:40px 0;
+        
     }
 
     .left {
-        flex: 1;
         padding-right: 20px; 
     }
 
     .right {
-        flex: 1;
-        text-align: center; 
+        width:665px;
+        height: 837px;
+        background-image: url(./images/hero_section_img.svg);
+        object-fit: cover;
     }
 
     .text h1 {
@@ -154,15 +155,6 @@ header{
 
 @media screen and (max-width: 900px) {
 
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        align-content: center;
-        gap:350px;
-    }
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -195,6 +187,7 @@ header{
         justify-content: space-between;
         align-items: center;
         padding: 40px 0;
+
     }
     .text h1{
         width: 100%;
@@ -208,37 +201,20 @@ header{
     
     .btns {
         margin-top: 20px; 
-    }
-
-    .right{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    
-}
-
-@media screen and (max-width: 1191px) {
-    .right img {
-        max-width: 100%; 
-        min-height: 300px;
-    }
-
+    }    
 }
 
 /* CATEGORY SECTION */
 
-
 .category-section{
+    margin-top: 100px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap:20px;
     width: 100%;
-    margin-top: 200px;
-    
-    
+   
+
 }
 
 .title-holder{
@@ -247,7 +223,6 @@ header{
 }
 
 .title-holder h2{
-    height: auto;
     color: #000;
     font-size: 50px;
     font-weight: 700;
@@ -310,7 +285,7 @@ header{
     font-size: 50px;
 }
 
-/* Responsivnes - Styles for screens less than 900px */
+
 
 @media (max-width: 900px){
     .category-section{
@@ -327,3 +302,112 @@ header{
 
 
 }
+
+    
+    /* PRODUCT SECTION */
+
+    .product-section{
+        margin-top: 100px;
+    }
+
+    .product-card-container{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        
+    }
+
+    .image{
+        width: 376px;
+        height: 459px;
+        background-size: cover;
+        background-repeat:no-repeat;   
+    }
+
+    .woman{
+        background-image: url(./images/product-card-woman.svg);
+    }
+    .man{
+        background-image: url(./images/product-card-man.svg);
+    }
+
+    .kids{
+        background-image: url(./images/product-card-kids.svg);
+    }
+
+    .product-title{
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; 
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+    }
+
+    .price{
+        color: rgba(0, 0, 0, 0.80);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; 
+        letter-spacing: 1.62px;
+    
+    }
+
+    .details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+
+    .product-section>.title-holder{
+        margin:56px 0;
+    }
+
+    .product-card{
+        position: relative;
+        overflow: hidden;
+       
+    }
+    .sizes-overlay{
+        height: 50px;
+        position: absolute;
+        width:80%;
+        display: flex;
+        gap: 27px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 9px 30px;
+        bottom:100px;
+        left: 38px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out color 0.3s ease-in-out;
+    }
+
+    .product-card:hover .sizes-overlay{
+        opacity: 1;
+        color:  var(--parapgraph_color, rgba(119, 116, 116, 0.80));
+        background-color:rgba(255, 255, 255, 0.75);
+    }
+
+    .sizes-overlay p:hover{
+        color:#000;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+   
+    @media  (max-width: 900px) {
+        .product-section,.product-card-container{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+       
+    }
+   
